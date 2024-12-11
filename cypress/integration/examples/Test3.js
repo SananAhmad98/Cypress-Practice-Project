@@ -34,5 +34,18 @@ if($el.text() === "India"){
 
 cy.get("#autocomplete").should("have.value","India");
 
+//Verify visibility and invisibility of elements in Cypress
+
+cy.get("#displayed-text").should("be.visible");
+cy.get("#hide-textbox").click()
+cy.get("#displayed-text").should("not.be.visible");
+cy.get("#show-textbox").click()
+cy.get("#displayed-text").should("be.visible");
+
+//Automate Radio buttons
+
+cy.get("input[value='radio2']").check().should("be.checked");
+
+
 })
 })
