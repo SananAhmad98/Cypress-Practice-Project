@@ -1,3 +1,5 @@
+import ProductPage from './ProductPage'
+
 class HomePage{
 
 navigateToHomePage(url){

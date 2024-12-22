@@ -1,3 +1,5 @@
+import CartPage from './CartPage'
+
 class ProductPage{
 
 productPageValidation(){

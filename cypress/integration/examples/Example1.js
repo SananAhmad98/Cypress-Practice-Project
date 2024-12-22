@@ -1,30 +1,29 @@
 /// <reference types="cypress" />
 
+import HomePage from '../../support/pageObjects/HomePage'
+
 describe("End-to-end e-commerce test", function() {
 
-    let testData;
+
 //This the before hook which is used to run once before all the tests in this block. We are loading dynamic data in this hook.    
 before(function(){
 
     cy.fixture('ExampleData1').then(function(data) //fixture helps us to load dynamic data into our cypress tests.
     { 
 
-        testData = data;
-        this.homePage = new HomePage();
+        this.data = data;
         
     }) 
 
-    
-
+    this.homePage = new HomePage();
 })
 
 it("Submit Order", function(){
   
-const productName = testData.productName;    
-
+const productName = this.data.productName;    
 
 this.homePage.navigateToHomePage("https://rahulshettyacademy.com/loginpagePractise/");
-const productPage = this.homePage.login(testData.username,testData.password);
+const productPage = this.homePage.login(this.data.username,this.data.password);
 
 productPage.productPageValidation();
 productPage.verifyCardLimit();
@@ -40,7 +39,7 @@ expect(sum).to.be.lessThan(200000);
 })
 
 const confirmationPage = cartPage.navigateToCheckOutPage();
-confirmationPage.selectCountry(testData.country);
+confirmationPage.selectCountry(this.data.country);
 confirmationPage.confirmPurchase();
 
 })// test case 1
