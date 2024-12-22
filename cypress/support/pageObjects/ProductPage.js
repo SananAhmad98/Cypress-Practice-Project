@@ -7,9 +7,9 @@ productPageValidation(){
     cy.contains("Shop Name").should("be.visible");
 }
 
-verifyCardLimit(){
+getCardCount(){
 
-    cy.get("app-card").should("have.length",4);
+    return cy.get("app-card");
 }
 
 selectProduct(productName){
@@ -36,7 +36,6 @@ goToCart(){
     return new CartPage();
 
 }
-
 }
 
 export default ProductPage;

@@ -14,9 +14,7 @@ return cy.get("tr td:nth-child(4) strong").each(($element) => {
 }).then(() => {
 
     return totalSum;
-
 })
-
 }
 
 navigateToCheckOutPage(){
