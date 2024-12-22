@@ -22,7 +22,7 @@ describe("End-to-end e-commerce test", function () {
 
         const productName = this.data.productName;
 
-        this.homePage.navigateToHomePage(cy.env('url')+"/loginpagePractise/");
+        this.homePage.navigateToHomePage(Cypress.env('url')+"/loginpagePractise/");
         const productPage = this.homePage.login(this.data.username, this.data.password);
 
         productPage.productPageValidation();
