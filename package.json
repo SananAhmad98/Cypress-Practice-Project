@@ -2,8 +2,10 @@
   "name": "1-udemycourse",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "Script": {
+    
+    "Example1Test": "npx cypress run --spec \"cypress/integration/examples/Example1.js\" --headless",
+    "Test4" : "npx cypress run --spec \"cypress/integration/examples/Test4.js\" --headless"
   },
   "author": "",
   "license": "ISC",

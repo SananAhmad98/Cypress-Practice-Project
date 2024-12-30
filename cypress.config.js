@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 
   //Increasing deafult timeout from 4 ms to 6 ms
-  defaultCommandTimeout: 6000,
+  defaultCommandTimeout: 4000,
   reporter: 'cypress-mochawesome-reporter',
   env: {
 
