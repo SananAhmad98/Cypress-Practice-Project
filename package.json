@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "Script": {
-    
     "Example1Test": "npx cypress run --spec \"cypress/integration/examples/Example1.js\" --headless",
-    "Test4" : "npx cypress run --spec \"cypress/integration/examples/Test4.js\" --headless"
+    "Test4": "npx cypress run --spec \"cypress/integration/examples/Test4.js\" --headless"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +13,9 @@
     "cypress": "^13.17.0",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@cypress/browserify-preprocessor" : "latest"
   }
 }
