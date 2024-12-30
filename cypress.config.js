@@ -42,6 +42,6 @@ module.exports = defineConfig({
     //specPattern: "cypress/integration/examples/*.js"
 
     //For Fetaure files
-    specPattern: "cypress/integration/examples/BDD/ecommerce/*.features"
+    specPattern: "cypress/integration/examples/BDD/*.feature"
   },
 });
