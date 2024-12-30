@@ -20,7 +20,7 @@ When("Select mulitple products and go to cart page", function () {
 
     this.productPage.productPageValidation();
     this.productPage.getCardCount().should("have.length", 4);
-    this.productPage.selectProduct(productName);
+    this.productPage.selectProduct(this.data.productName);
     this.productPage.selectFirstProduct();
     this.cartPage = this.productPage.goToCart();
 })
@@ -39,7 +39,7 @@ When("Validate total price of selected products", function () {
 When("Navigate to checkout page", function () {
 
 
-    this.confirmationPage = cartPage.navigateToCheckOutPage();
+    this.confirmationPage = this.cartPage.navigateToCheckOutPage();
 
 })
 
