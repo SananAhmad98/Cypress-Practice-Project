@@ -15,6 +15,13 @@ When("I go to the e-commerce application", function () {
     this.productPage = homePage.login(this.data.username, this.data.password);
 })
 
+//This parametrized example of this feature
+When("I go to the e-commerce application portal", function (dataTable) {
+
+
+    this.productPage = homePage.login(dataTable.rawTable[1][0], dataTable.rawTable[1][1] );
+})
+
 When("Select mulitple products and go to cart page", function () {
 
 
