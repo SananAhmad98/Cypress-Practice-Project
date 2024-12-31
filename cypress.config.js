@@ -22,8 +22,8 @@ async function setupNodeEvents(on, config){
 
 module.exports = defineConfig({
 
-  //Increasing deafult timeout from 4 ms to 6 ms
-  defaultCommandTimeout: 6000,
+  //Increasing deafult timeout from 4 ms to 8 ms
+  defaultCommandTimeout: 8000,
   reporter: 'cypress-mochawesome-reporter',
   env: {
 
@@ -37,9 +37,9 @@ module.exports = defineConfig({
     // }
     
     //Tell cypress that we have testcases/specs present in this location
-    //specPattern: "cypress/integration/examples/*.js"
+    specPattern: "cypress/integration/examples/*.js"
 
     //For Fetaure files
-    specPattern: "cypress/integration/examples/BDD/*.feature"
+    //specPattern: "cypress/integration/examples/BDD/*.feature"
   },
 });
